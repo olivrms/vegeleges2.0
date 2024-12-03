@@ -1,0 +1,421 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html{
+    padding: 0;
+    margin: 0;
+}
+
+#wan{
+    background-color: #faf0ca;
+}
+#kio{
+    background-color: #A8A972;
+}
+#aang{
+    background-color: #F7E3AF;
+}
+#korra{
+    background-color: #A0D2DB;
+}
+#roku{
+    background-color: #eeb586;
+}
+.container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.container>* {
+    height: fit-content;}
+header{
+    padding: 0;
+    text-align: center;
+    font-size:1.8em;
+    color: #111111;
+    padding: 5px;
+    height: 90px;
+    flex: 1 1 100%;
+}
+
+header h1{
+    padding: 0;
+    margin: 0;
+    font-family:"herculanum";
+    font-size: 1.4em;
+}
+
+article{
+    color:#111111;
+    padding:  10px;
+    flex: 1 1 100%;
+}
+article p{
+    font-family:"patrick";
+    font-size: 1.3em;
+    line-height: 1.8em;
+}
+.p_galeria{
+    margin-top: 100px;
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: center;
+    font-family: "patrick";
+}
+@font-face{
+    font-family: "patrick";src: url(font/PatrickHand.ttf);
+}
+h1{
+    font-size: 1.8em;
+}
+article h2{
+    padding: 5px;
+    font-size: 1.7em;
+    color: #111111;
+    font-family:"herculanum";
+}
+@font-face{
+    font-family: "herculanum";src: url(font/herculanum.TTF);
+}
+aside{
+    color:#43291f;
+    text-align: center;
+    border-radius: 20px;
+    font-family: "bio";
+    order: 1;
+    flex: 1 1 100%;
+    margin: 5px;
+}
+aside h3{
+        font-size: 1.4em;
+}
+aside input{
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+aside img{
+    float:none;
+    width: 100%;
+}
+@font-face{
+    font-family: "bio";src: url(font/BioRhyme.ttf);
+}
+.r_as{
+    border: 3px solid rgb(245, 132, 97);
+}
+.r_as input{
+    background-color: rgb(245, 132, 97);
+    border-radius: 10px;
+}
+
+.ky_as{
+    border: 3px solid rgb(117, 133, 86);
+}
+.ky_as input{
+    background-color: rgb(117, 133, 86);
+    border-radius: 10px;
+}
+
+.w_as{
+    border: 3px solid #f2cc8f;
+}
+
+.ko_as{
+    border: 3px solid rgb(126, 167, 243);
+}
+.ko_as input{
+    background-color: rgb(126, 167, 243);
+    border-radius: 10px;
+}
+
+.a_as{
+    border: 3px solid rgb(235, 198, 150);
+}
+.a_as input{
+    background-color: rgb(235, 198, 150);
+    border-radius: 10px;
+}
+
+.hatter{
+    background-image: url(kepek/avatarok.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-position-y:20%;
+}
+nav{
+    padding: 10px;
+    flex: 1 1 100%;
+}
+
+ nav li a{
+    display: block;
+    padding: 10px;
+    color: #43291f;
+    background-color: #f2cc8f;
+    font-size: 1.4em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    margin: 0;
+    font-family: "papyr", "papyrus";
+    font-weight: bolder;
+ }
+ @font-face{
+    font-family: "papyr"; src: url(font/papyrus.ttf) ;
+ }
+ nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; 
+    padding: 0;
+    margin: 0;
+    height: 600px;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+nav li {
+    margin: 5px 0;
+}
+
+
+
+img{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.active{
+    border-radius: 20px;
+}
+.ky{
+    background-color: #A8A972;
+}
+.a{
+    background-color: #F7E3AF;
+}
+.w{
+    background-color:#faf0ca ;
+}
+.kor{
+    background-color: #A0D2DB;
+}
+.r{
+    background-color: #eeb586;
+}
+footer a{
+    text-decoration: none;
+    font-size: 1.1em;
+    font-family: "bio";
+    color: black;
+    border: 3px solid black;
+    border-radius: 10px;
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+footer{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 90%;
+}
+#quiz{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
+    gap: 10px;
+}
+#quiz p{
+    flex-basis: 100%;
+    text-align: center;
+}
+#quiz p.elsosor{
+    flex-basis: 90%;
+}
+#quiz p input[type="range"]{
+    accent-color: #f2cc8f;
+    width: 80%;
+    margin: 0 auto;
+}
+#button{
+    flex-basis: 50%;
+    background-color: #f2cc8f;
+    border-radius: 10px;
+    font-size: 2em;
+}
+form{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    border: 2px solid #f2cc8f;
+    border-radius: 15px;
+    flex-basis: 90%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-family: "patrick";
+}
+form input{
+    border-radius: 5px;
+    border: 2px solid #36270f;
+}
+form input[type="range"]{
+    accent-color: #f2cc8f;
+}
+.vege{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.vege input{
+    background-color: #b1ae96;
+    font-size: 1.1em;
+    width: 100%;
+}
+.vege label{
+    width: 80%;
+    margin-bottom: 10px;
+}
+label.error{
+    color: red;
+}
+section div{
+    margin-bottom: 20px;
+}
+section div h2{
+    font-family: "herculanum";
+    text-align: center;
+}
+@media all and (min-width: 600px) {
+    header{
+        height: 70px;
+    }
+    .active{
+        transform: scale(1.2);
+        padding: 10px;
+    }
+    nav ul{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: end;
+        height: 400px;
+    }
+    nav li{
+        flex-basis: 15%;
+    }
+
+    h1{
+        font-size: 150%;
+    }
+    .hatter{
+        background-size: 100%;
+        background-position-y:10%;
+    }
+    
+    body{
+        font-size: 90%;
+    }
+    img{
+        display: block;
+        float: left;
+        width: 50%;
+        margin-right: 20px;
+        margin-bottom: 5px;
+        margin-left: 5px;
+    }
+    img.wan{
+        float: right;
+        margin-left: 20px;
+        margin-right: 5px;
+    }
+
+
+    .contwo {
+        display: flex;
+        flex-direction: row; 
+        flex-basis: 100%; 
+    }
+
+    .artcont {
+        display: flex;
+        flex-basis: 75%;
+        flex-direction: column;
+    }
+
+    article {
+        padding: 10px;
+    }
+
+    aside {
+        flex-basis: 25%; 
+        padding: 10px; 
+        height: fit-content;
+        margin-top: 50px;
+    }
+    footer{
+        flex-direction: row;
+        justify-content: space-around;
+        flex-basis: 100%;
+    }
+    footer a{
+        flex-basis: 40%;
+    }
+    #quiz p{
+        flex-basis: 25%;
+    }
+    #quiz p.quiz_a{
+        flex-basis: 100%;
+    }
+    form{
+        flex-basis: 70%;
+        font-size: 1.3em;
+    }
+    .vege label{
+        width: 40%;
+    }
+}
+@media all and (min-width: 768px) {
+    h1{
+        font-size: 200%;
+        
+    }
+    article{
+        flex: 1 1 70%;
+        line-height: 1.8em;
+    }
+    img{
+        width: 40%;
+    }
+    p{
+        font-size: 1.5em;
+    }
+    nav ul{
+        height: 550px;
+    }
+    h3{
+        font-size: 1.5em;
+    }
+    article p{
+        font-size: 1.7em;
+    }
+    aside h3{
+        font-size: 1.65em;
+    }
+    aside input{
+        font-size: 1.2em;
+    }
+    form{
+        flex-basis: 50%;
+        border-radius: 30px;
+    }
+    .vege label{
+        width: 30%;
+    }
+}

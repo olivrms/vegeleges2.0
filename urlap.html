@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aang és Korra legendája bemutatása">
+    <meta name="author" content="Vermes Olivér">
+    <meta name="copyright" content="Tanulási célra">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="kepek/favicon.png" type="image/x-icon">
+    <title>Avatár</title>
+    <script src="jquery/jquery-3.7.1.min.js"></script>
+    <script src="jquery/jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+</head>
+<body id="wan">
+    <header>
+        <h1>A négy elem mestere</h1>
+    </header>
+    <div class="container">
+        
+        <nav class="hatter w">
+            <ul>
+                <li><a href="Kyoshi.html" class="ky">Kioshi</a></li>
+                <li><a href="Aang.html" class="a">Aang</a></li>
+                <li><a href="index.html" class="w">Avatárok-Wan</a></li>
+                <li><a href="Korra.html" class="kor">Korra</a></li>
+                <li><a href="Roku.html" class="r">Roku</a></li>
+            </ul>
+        
+        </nav>
+    <form method="post" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" id="myform" novalidate>
+        <label class="teljes">Név:<br>
+            <input type="text" name="nev" placeholder="pl.: Paprika Jancsi">
+        </label><br>
+        <label>Mikor születtél?<br>
+            <input type= "date" name="szuldat">
+            </label><br>
+        
+        <label>Add meg az email címed <br>
+            <input type="text" name="email" placeholder="pl.: paprikajancsi@gmail.com"></label><br>
+
+    <label>Ki a kedvenc karaktered?<br>
+        <input type="text" name="kedvenc" placeholder="pl.: Aang">
+    </label><br>
+
+
+        Láttad az Avatár - Aang legendáját?<br>
+        <label>Igen<input type="radio" name="lattad" value="igen">
+        </label>
+        <label>Nem<input type="radio" name="lattad" value="nem">
+        </label><br>
+
+    <label>Ha választhatnál melyik elemet idomítanád<br>
+        <select size="1" name="elem">
+        <option value="víz">víz</option>
+        <option value="föld">föld</option>
+        <option value="tűz">tűz</option>
+        <option value="levegő">levegő</option>
+        </select>
+    </label><br>
+
+    
+    <label>Mennyire mélyültél el a sorozatban?<br>
+        <input type="range" min="1" max="10" step ="1" value ="5" name="elmelyules">
+    </label><br>
+
+        Melyik csatákra/ostromokra emlékszel?<br>
+        <label><input type="checkbox" name="Deli_viztorzs" value="ON">
+        A Déli Víz Törzs támadása<br></label>
+        <label><input type="checkbox" name="Levegonomadok" value="ON">
+        A Levegő Nomádok kiirtása<br></label>
+        <label><input type="checkbox" name="Omashu" value="ON">
+        Omashu elfoglalása<br></label>
+        <label><input type="checkbox" name="Kyoshi" value="ON">
+        A Kyoshi-sziget csatája<br></label>
+        <label><input type="checkbox" name="Eszaki_viztorzs" value="ON">
+        Az Északi Víz Törzs ostroma<br></label>
+        <label><input type="checkbox" name="Konyvtar" value="ON">
+        A könyvtár ostroma<br></label>
+        <label><input type="checkbox" name="Napfogyaztkozas" value="ON">
+        A napfogyatkozás alatti invázió<br></label>
+        <label><input type="checkbox" name="Sozin" value="ON">
+        A Sozin-üstökös csatája<br></label>
+        <label><input type="checkbox" name="Amon" value="ON">
+        Amon mozgalma<br></label>
+        <label><input type="checkbox" name="Eszaki_vs_Deli_viztorzs" value="ON">
+        Az Északi Víz Törzs inváziója a Déli ellen<br></label>
+        <label><input type="checkbox" name="Szellemvilag_kapuja" value="ON">
+        A Szellemvilág kapujáért folytatott harc<br></label>
+        <label><input type="checkbox" name="Vaatu_unalak" value="ON">
+        Vaatu és Unalaq elleni csata<br></label>
+        <label><input type="checkbox" name="Zaheer" value="ON">
+        Zaheer elleni csata<br></label>
+        <label><input type="checkbox" name="Kuvira" value="ON">
+        Kuvira hadseregének inváziója</label><br>
+
+    <label>Kérlek írd le mi tetszett/nem tetszett a sorozatban<br>
+        <textarea name="velemeny" rows="5" cols="20"></textarea>
+    </label><br>
+    
+
+    <div class="vege">
+    <label><input type="reset" name="elolrol" value="Törlés"></label>
+    <label><input type="submit" name="kuld" value="Elküldés"></label>
+    </div>
+
+        
+                    
+    </form>
+    <footer>
+        <a href="#">Űrlap kitöltése</a>
+        <a href="quiz.html">Teszt kitöltése</a>
+    </footer>
+    </div>
+    <script>
+        $(document).ready(function(){
+   $("#myform").validate({
+    rules: {
+     nev: "required",
+     email: {
+        required: true,
+        email: true
+     },
+     szuldat: "required",
+     kedvenc: "required",
+     velemeny: "required",
+     lattad: "required"
+    },
+    messages: {
+     nev: "Kérlek add meg a neved",
+     email: "Kérlek valódi email címet adj meg",
+     szuldat: "Kérlek add meg a születési dátumod",
+     kedvenc: "Kérlek add meg ki a kedvenc karaktered",
+     velemeny: "Kérlek írd le a véleményed",
+     lattad: "Kérlek válaszolj a kérdésre"
+    },
+   });
+ });
+        </script>
+        
+    </body>
+    </html>
